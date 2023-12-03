@@ -1,6 +1,7 @@
 package solutions
 
 import (
+	"aoc2023/utils"
 	"strconv"
 	"strings"
 	"unicode"
@@ -8,7 +9,7 @@ import (
 
 func Day3Part1(input string) string {
 	lines := strings.Split(input, "\n")
-	matrix := createMatrix(lines)
+	matrix := utils.CreateMatrix(lines)
 
 	sum := 0
 	for i, row := range matrix {
@@ -58,22 +59,9 @@ func checkIsPartNumber(i int, j int, matrix [][]rune) bool {
 	return false
 }
 
-func createMatrix(lines []string) [][]rune {
-	var matrix [][]rune
-	for _, line := range lines {
-		var row []rune
-		for _, char := range line {
-			row = append(row, char)
-		}
-		matrix = append(matrix, row)
-	}
-
-	return matrix
-}
-
 func Day3Part2(input string) string {
 	lines := strings.Split(input, "\n")
-	matrix := createMatrix(lines)
+	matrix := utils.CreateMatrix(lines)
 
 	sum := 0
 	starGears := make(map[Coordinate][]int)
