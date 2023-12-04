@@ -24,8 +24,11 @@ func Day4Part1(input string) string {
 
 		winCount := 0
 		for _, myNumber := range myNumbers {
+			if myNumber == "" {
+				continue
+			}
 			for _, winningNumber := range winningNumbers {
-				if myNumber == winningNumber && myNumber != "" {
+				if myNumber == winningNumber {
 					if winCount == 0 {
 						winCount++
 					} else {
@@ -62,8 +65,11 @@ func Day4Part2(input string) string {
 		myNumbers := strings.Split(numSets[1], " ")
 		winCount := 0
 		for _, myNumber := range myNumbers {
+			if myNumber == "" {
+				continue
+			}
 			for _, winningNumber := range winningNumbers {
-				if myNumber == winningNumber && myNumber != "" {
+				if myNumber == winningNumber {
 					winCount++
 				}
 			}
