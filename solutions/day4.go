@@ -46,7 +46,7 @@ func Day4Part1(input string) string {
 func Day4Part2(input string) string {
 	cards := strings.Split(input, "\n")
 	totalCards := make(map[int]int)
-	for i, _ := range cards {
+	for i := range cards {
 		totalCards[i] = 1
 	}
 

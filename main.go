@@ -6,7 +6,7 @@ import (
 	"fmt"
 )
 
-const day = 4
+const day = 15
 const part = 2
 
 var input = fmt.Sprintf("inputs/day%d.txt", day)
@@ -43,6 +43,20 @@ func main() {
 			result = solutions.Day4Part1(inputStr)
 		case 2:
 			result = solutions.Day4Part2(inputStr)
+		}
+	case 14:
+		switch part {
+		case 1:
+			result = solutions.Day14Part1(inputStr)
+		case 2:
+			result = solutions.Day14Part2(inputStr)
+		}
+	case 15:
+		switch part {
+		case 1:
+			result = solutions.Day15Part1(inputStr)
+		case 2:
+			result = solutions.Day15Part2(inputStr)
 		}
 	}
 
